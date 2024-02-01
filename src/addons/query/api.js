@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { server } from 'addons/global_variable.inc';
 
-const req = `${server}req/`
+const req = `${server}`;
 const auth = "JePhThAh";
 //axios starts
 const axiosClient = axios.create({baseURL: req})
@@ -45,23 +45,23 @@ const fetchRequest = (url, options = {}, dependencies = []) => {
 
 //CREATE, UPDATE AND DELETE REQUEST
 export const sendMessage = (data) => {
-    return axiosRequest({url: `act/sm/`, method: `post`, data: data});
+    return axiosRequest({url: `sm/`, method: `post`, data: data});
 }
 
 
 //READ REQUEST
 export const getImage = async () => {
-    return await axiosRequest({url: `get/gim/`, method: `get`});
+    return await axiosRequest({url: `gim/`, method: `get`});
 }
 
 export const getSocialHandle = async() => {
-    return await axiosRequest({url: `get/gsh/`, method: `get`});
+    return await axiosRequest({url: `gsh/`, method: `get`});
 }
 
 export const getSkill = async() => {
-    return await axiosRequest({url: `get/gsk/`, method: `get`});
+    return await axiosRequest({url: `gsk/`, method: `get`});
 }
 
 export const getProject = async() => {
-    return await axiosRequest({url: `get/gp/`, method: `get`});
+    return await axiosRequest({url: `gp/`, method: `get`});
 }

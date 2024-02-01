@@ -6,6 +6,8 @@ import { server } from 'addons/global_variable.inc';
 function Myself(props) {
   const thColor = useSelector((state) => state.theme.value);
 
+  const cVURL = `${server}dcv/`;
+
     return (
       <>
       <div id='myself'title='About Oladejo Jephthah'className='j-home-padding'>
@@ -20,12 +22,12 @@ function Myself(props) {
               </div>
             </span>
             <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif'}}>
-              <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile(`${server}req/act/dcv`,'OLADEJO JEPHTHAH CV.pdf')}>
+              {/* <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile(cVURL,'OLADEJO JEPHTHAH CV.pdf')}>
                 Download CV
-              </div>
-              {/* <a href="https://www.portfoliobe.com/req/act/dcv"className='j-round j-btn j-bolder j-padding'>
+              </div> */}
+              <a href={cVURL}className='j-round j-btn j-bolder j-padding'>
                 Download CV
-              </a> */}
+              </a>
             </span>
           </div>
         </div>

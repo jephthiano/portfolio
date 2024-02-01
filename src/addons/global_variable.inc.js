@@ -1,6 +1,6 @@
-// export const server = "http://www.portfoliobe.com/"
+//export const server = "http://www.portfoliobe.com/"
 
- export const server = "https://jephthiano.000webhostapp.com/"
+export const server = "https://jephthiano.000webhostapp.com/"
 
 export const imgServer = `${server}media/`;
 
