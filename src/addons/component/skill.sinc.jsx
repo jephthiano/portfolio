@@ -44,18 +44,26 @@ function Skill(props) {
   //if the data is okay and not empty
   return (
         <>
-        <div className='j-padding-small'>
+        <div className='j-padding-small j-row'>
         {
             sectionData.map((data,index) => {
                 return(
-                  <div key={index} className='j-row'>
-                    <div className='j-col s4 l3'title={data.s_skill}> {data.s_skill} </div>
-                    <div className='j-col s6 l7'>
-                        <div className={progressBg}style={{width:'100%',height:'10px',position:'relative',top:'8px'}}>
-                            <div className='j-round j-color8'style={{width:`${data.s_percentage}%`,height:'10px'}}></div>
-                        </div>
+                  <div className={thColor.txtColor1} key={index}>
+                    <div className='j-col s6' style={{marginBottom:'20px'}}>
+                      <div style={{display:'inline-block',marginRight:'20px',position:'relative',top:'-10px'}}>
+                        <i className="j-large fas fa-certificate"style={{color:'#1a80c4'}}></i>
+                      </div>
+                      <div style={{display:'inline-block'}}>
+                        <div className='j-bolder'title={data.s_skill}> {data.s_skill} </div>
+                        <div className="j-text-color5 j-itallic">{data.s_level}</div>
+                      </div>
+                      {/* <div className='j-col s6 l7'>
+                          <div className={progressBg}style={{width:'100%',height:'10px',position:'relative',top:'8px'}}>
+                              <div className='j-round j-color8'style={{width:`${data.s_percentage}%`,height:'10px'}}></div>
+                          </div>
+                      </div>
+                      <div className='j-col s2 l2'style={{position:'relative',top:'2px',right:'-5px'}}> {data.s_percentage}%</div>  */}
                     </div>
-                    <div className='j-col s2 l2'style={{position:'relative',top:'2px',right:'-5px'}}> {data.s_percentage}%</div> 
                   </div>
                 )
             })

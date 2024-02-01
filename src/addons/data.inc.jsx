@@ -16,22 +16,22 @@ export const socialHandle = [
 
 //skill data
 export const skill = [
-    {"id":"1","s_type":"frontend dev","s_skill":"HTML","s_percentage":"95"},
-    {"id":"2","s_type":"frontend dev","s_skill":"CSS","s_percentage":"94"},
-    {"id":"3","s_type":"frontend dev","s_skill":"JavaScript","s_percentage":"94"},
-    {"id":"4","s_type":"frontend dev","s_skill":"JQuery","s_percentage":"96"},
-    {"id":"5","s_type":"frontend dev","s_skill":"React JS","s_percentage":"94"},
-    {"id":"6","s_type":"others","s_skill":"JSON & XML","s_percentage":"96"},
-    {"id":"7","s_type":"others","s_skill":"AJAX","s_percentage":"98"},
-    {"id":"8","s_type":"others","s_skill":"WebSocket","s_percentage":"90"},
-    {"id":"9","s_type":"backend dev","s_skill":"PHP","s_percentage":"94"},
-    {"id":"10","s_type":"database","s_skill":"MySQL","s_percentage":"90"},
-    {"id":"11","s_type":"others","s_skill":"SEO","s_percentage":"90"},
-    {"id":"16","s_type":"others","s_skill":"Git & GitHub","s_percentage":"96"},
-    {"id":"17","s_type":"others","s_skill":"UI\/UX Design","s_percentage":"80"},
-    {"id":"18","s_type":"frontend dev","s_skill":"SASS","s_percentage":"90"},
-    {"id":"19","s_type":"database","s_skill":"PostgreSQL","s_percentage":"88"},
-    {"id":"20","s_type":"database","s_skill":"SQL","s_percentage":"96"},
+    {"id":"1","s_type":"frontend dev","s_skill":"HTML","s_level":"Expert"},
+    {"id":"2","s_type":"frontend dev","s_skill":"CSS","s_level":"Expert"},
+    {"id":"3","s_type":"frontend dev","s_skill":"JavaScript","s_level":"Expert"},
+    {"id":"4","s_type":"frontend dev","s_skill":"JQuery","s_level":"Expert"},
+    {"id":"5","s_type":"frontend dev","s_skill":"React JS","s_level":"Expert"},
+    {"id":"6","s_type":"others","s_skill":"JSON & XML","s_level":"Expert"},
+    {"id":"7","s_type":"others","s_skill":"Axios","s_level":"Experienced"},
+    {"id":"8","s_type":"others","s_skill":"WebSocket","s_level":"Average"},
+    {"id":"9","s_type":"backend dev","s_skill":"PHP","s_level":"Expert"},
+    {"id":"10","s_type":"database","s_skill":"MySQL","s_level":"Expert"},
+    {"id":"11","s_type":"others","s_skill":"SEO","s_level":"Experienced"},
+    {"id":"16","s_type":"others","s_skill":"Git & GitHub","s_level":"Experienced"},
+    {"id":"17","s_type":"others","s_skill":"UI\/UX Design","s_level":"Average"},
+    {"id":"18","s_type":"frontend dev","s_skill":"SASS","s_level":"Experienced"},
+    {"id":"19","s_type":"database","s_skill":"PostgreSQL","s_level":"Experienced"},
+    {"id":"20","s_type":"database","s_skill":"SQL","s_level":"Expert"},
     
 ]
 
