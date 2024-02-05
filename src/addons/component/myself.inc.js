@@ -22,12 +22,12 @@ function Myself(props) {
               </div>
             </span>
             <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif'}}>
-              {/* <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile(cVURL,'OLADEJO JEPHTHAH CV.pdf')}>
+              <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile(cVURL,'OLADEJO JEPHTHAH CV.pdf')}>
                 Download CV
-              </div> */}
-              <a href={cVURL}className='j-round j-btn j-bolder j-padding'>
+              </div>
+              {/* <a href={cVURL}className='j-round j-btn j-bolder j-padding'>
                 Download CV
-              </a>
+              </a> */}
             </span>
           </div>
         </div>
