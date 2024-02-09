@@ -3,9 +3,12 @@ import { server } from 'addons/global_variable.inc';
 
 const req = `${server}`;
 const auth = "JePhThAh";
+
+
 //axios starts
 const axiosClient = axios.create({baseURL: req})
 
+//AXIOS API
 const axiosRequest = ({...options}) => {
     axiosClient.defaults.headers.common.Authorization = auth;
      const axiosOnSuccess = (response) => response
@@ -24,20 +27,22 @@ const DEFAULT_OPTIONS = {
         "Content-Type":"application/json",
     },
 }
-const fetchRequest = (url, options = {}, dependencies = []) => {
-    const fetchOnSuccess = (data) => { return {data:data} }
-    const fetchOnError = (error) => { throw new Error(); }
-    return fetch(`${req}${url}`,{...DEFAULT_OPTIONS,...options})
-    .then(response => {
-        if(response.ok){
-            return response.json()
-        }else{
-            throw new Error();
-        }
-    })
-    .then(fetchOnSuccess)
-    .catch(fetchOnError)
-}
+
+// FETCH API
+// const fetchRequest = (url, options = {}, dependencies = []) => {
+//     const fetchOnSuccess = (data) => { return {data:data} }
+//     const fetchOnError = (error) => { throw new Error(); }
+//     return fetch(`${req}${url}`,{...DEFAULT_OPTIONS,...options})
+//     .then(response => {
+//         if(response.ok){
+//             return response.json()
+//         }else{
+//             throw new Error();
+//         }
+//     })
+//     .then(fetchOnSuccess)
+//     .catch(fetchOnError)
+// }
 //to use in hook
 // return await fetchRequest(`get/gsk/`,{method: `get`}); // get
 

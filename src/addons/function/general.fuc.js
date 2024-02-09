@@ -150,11 +150,11 @@ export const horNav = (clk_s,clk,itr='') =>{
     axios({
         method:'get',
         url:path,
+        responseType:'arraybuffer',
         headers:{
             'Authorization':'JePhThAh',
             'content-Type':'application/pdf',
         },
-        responseType:'arraybuffer',
     })
     .then(response =>{
             const blob = new Blob([response.data], {type: 'application/pdf'});
