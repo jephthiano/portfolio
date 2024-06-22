@@ -1,5 +1,5 @@
 import {useSelector} from "react-redux";
-import SocialHandle from 'addons/component/social_handle.sinc';
+import SocialHandle from 'addons/component/sub_component/social_handle.sinc';
 
 function Footer(props) {
     const theme = useSelector((state) => state.theme.value);

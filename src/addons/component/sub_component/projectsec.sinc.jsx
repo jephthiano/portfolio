@@ -1,32 +1,14 @@
-import { useProject } from 'addons/query/get_query';
+import { useNeededData } from 'addons/query/get_query';
 import { imgServer } from 'addons/global_variable.inc';
 import { toggle_modal, extractObject } from 'addons/function/general.fuc'
 import { ProjectModal } from 'addons/function/modal.fuc';
-import { project } from 'addons/data.inc';
 
 
 const ProjectSec = (props) => {
-  let projectData;
 
-  const { data,  isError, isLoading } = useProject();
-
-  //if data is loading
-  if(isLoading){
-    return (
-      <div className='j-small'>Loading...</div>
-    )
-  }
-
-  //if there is error
-  if(isError || data.data === 'invalid request'){ 
-    //for impromptu data
-    projectData = project;
-    // return (
-    //   <div className='j-small'>Could not fetch project data, kindly refresh</div>
-    // )
-  }else{
-    projectData = data.data;
-  }
+  const { data,  isError, isLoading } = useNeededData();
+  const projectData = data.project;
+  
 
   //get new array by type (if data is fine)
   const sectionData = extractObject(projectData,'p_type',props.type);

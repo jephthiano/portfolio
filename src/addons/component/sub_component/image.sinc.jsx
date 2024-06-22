@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useImage } from 'addons/query/get_query';
+import { useNeededData } from 'addons/query/get_query';
 import { imgServer } from 'addons/global_variable.inc';
 
 function Image() {
@@ -9,17 +9,8 @@ function Image() {
     const lgImgClass = `${theme.border} j-hide-small j-round-large`;
 
     // using fetch image data
-    let imgUrl2;
-    const { data, isError, isLoading }= useImage();
-
-    if(isLoading || isError || data.data === 'invalid request'){ //if loading or there is error
-      imgUrl2 = `/icon.jpg`;
-    }else if(Array.isArray(data.data) && data.data.length < 1){ //if empty array is returned from the data
-      imgUrl2 = `/icon.jpg`;
-    }else{ //if everything is fine
-      imgUrl2 = `${imgServer}admin/${data.data.imgLink}`;
-    }
-    
+    const { data,  isError, isLoading } = useNeededData();
+    const imgUrl2 = data.image;
 
     return (
       <>

@@ -5,10 +5,9 @@ const req = `${server}`;
 const auth = "JePhThAh";
 
 
-//axios starts
-const axiosClient = axios.create({baseURL: req})
-
 //AXIOS API
+//axios starts
+const axiosClient = axios.create({baseURL: req});
 const axiosRequest = ({...options}) => {
     axiosClient.defaults.headers.common.Authorization = auth;
      const axiosOnSuccess = (response) => response
@@ -20,15 +19,16 @@ const axiosRequest = ({...options}) => {
 // return await axiosRequest({url: `get/gim/`, method: `get`}); //get
 
 
-//fetch starts
-const DEFAULT_OPTIONS = {
-    headers : {
-        "Authorization":auth,
-        "Content-Type":"application/json",
-    },
-}
-
 // FETCH API
+
+// //fetch starts
+// const DEFAULT_OPTIONS = {
+//     headers : {
+//         "Authorization":auth,
+//         "Content-Type":"application/json",
+//     },
+// }
+
 // const fetchRequest = (url, options = {}, dependencies = []) => {
 //     const fetchOnSuccess = (data) => { return {data:data} }
 //     const fetchOnError = (error) => { throw new Error(); }
@@ -48,25 +48,14 @@ const DEFAULT_OPTIONS = {
 
 
 
-//CREATE, UPDATE AND DELETE REQUEST
-export const sendMessage = (data) => {
-    return axiosRequest({url: `sm/`, method: `post`, data: data});
-}
 
 
 //READ REQUEST
-export const getImage = async () => {
-    return await axiosRequest({url: `gim/`, method: `get`});
+export const getNeededData = async () => {
+    return await axiosRequest({url: `gnd/`, method: `get`, data:{'request_type' : 'normal', 'action' : 'get_needed_data'}});
 }
 
-export const getSocialHandle = async() => {
-    return await axiosRequest({url: `gsh/`, method: `get`});
-}
-
-export const getSkill = async() => {
-    return await axiosRequest({url: `gsk/`, method: `get`});
-}
-
-export const getProject = async() => {
-    return await axiosRequest({url: `gp/`, method: `get`});
+//CREATE, UPDATE AND DELETE REQUEST
+export const sendMessage = (data) => {
+    return axiosRequest({url: `sm/`, method: `post`, data: data});
 }

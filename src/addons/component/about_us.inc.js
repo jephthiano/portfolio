@@ -1,15 +1,18 @@
 import $ from 'jquery'
+import { useNeededData } from 'addons/query/get_query';
 import { useSelector } from "react-redux";
-import { skillData } from 'addons/data.inc';
 import { horNav } from 'addons/function/general.fuc';
-import  Skill  from 'addons/component/skill.sinc'
-import Image from 'addons/component/image.sinc';
+import  Skill  from 'addons/component/sub_component/skill.sinc'
+import Image from 'addons/component/sub_component/image.sinc';
 
 
 function AboutUs(props) {
   //getting theme color
   const thColor = useSelector((state) => state.theme.value);
+  const { data,  isError, isLoading } = useNeededData();
+  
 
+  const skillData = data.skillData;
   return (
       <>
       <div id='about_me'title='about oladejo jephthah'className='trigger j-round-large'>

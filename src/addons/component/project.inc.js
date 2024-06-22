@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import {useSelector} from "react-redux";
+import  ProjectSec  from 'addons/component/sub_component/projectsec.sinc'
 import  {horNav} from 'addons/function/general.fuc';
-import ProjectSec from 'addons/component/projectsec.sinc'
 
 function Project(props) {
   const thColor = useSelector((state) => state.theme.value);
