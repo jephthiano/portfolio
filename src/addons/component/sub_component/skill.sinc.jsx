@@ -7,7 +7,7 @@ function Skill(props) {
   const thColor = useSelector((state) => state.theme.value);
   const progressBg = `${thColor.bgColor2} j-round`;
 
-  const { data,  isError, isLoading } = useNeededData();
+  const { data, isSuccess, isError, isLoading } = useNeededData();
   const skillData = data.skill;
 
 
