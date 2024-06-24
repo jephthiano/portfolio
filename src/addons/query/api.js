@@ -8,12 +8,19 @@ const auth = "JePhThAh";
 //AXIOS API
 // axios starts
 const axiosClient = axios.create({baseURL: req});
-const axiosRequest = ({...options}) => {
+const axiosRequest = (content_type,{...options}) => {
     axiosClient.defaults.headers.common.Authorization = auth;
-    const axiosOnSuccess = (response) => JSON.parse(response); 
+    axiosClient.defaults.headers.common.ContentType = content_type;
     
-     const axiosOnError = (error) => { throw new Error(); }
-     return axiosClient(options).then(axiosOnSuccess).catch(axiosOnError)
+    const axiosOnSuccess = (response) => { return (response.data)}; 
+    const axiosOnError = (error) => { console.log(error); }
+    axiosClient(options)
+    // .then(response => {
+    //     console.log((response.data));
+    // })
+    // return;
+
+    return axiosClient(options).then(axiosOnSuccess).catch(axiosOnError)
 }
 //to use in hook
 // return axiosRequest({url: `act/sm/`, method: `post`, data: data}); //post
@@ -32,10 +39,11 @@ const DEFAULT_OPTIONS = {
 
 const fetchRequest = (url, options = {}, dependencies = []) => {
     const fetchOnSuccess = (data) => { return {data:data} }
-    const fetchOnError = (error) => { throw new Error(); }
+    const fetchOnError = (error) => { console.log(error) }
     return fetch(`${req}${url}`,{...DEFAULT_OPTIONS,...options})
     .then(response => {
         if(response.ok){
+            console.log(response);
             return JSON.parse(response);
         }else{
             throw new Error();
@@ -54,11 +62,12 @@ const fetchRequest = (url, options = {}, dependencies = []) => {
 
 //READ REQUEST
 export const getNeededData = async () => {
-    return await axiosRequest({url: `gnd/`, method: `get`, data:{'request_type' : 'normal', 'action' : 'get_needed_data'}});
-    // return await fetchRequest(`gnd/`,{method: `get`, data:{'request_type' : 'normal', 'action' : 'get_needed_data'}}); // get
+    let data = JSON.stringify({"request_type" : "normal", "action" : "get_needed_data"});
+    return await axiosRequest('application/json', {url: `gnd/`, method: `post`, data: data});
+    // return await fetchRequest(`gnd/`,{method: `post`, data: data}); // get
 }
 
 //CREATE, UPDATE AND DELETE REQUEST
 export const sendMessage = (data) => {
-    return axiosRequest({url: `sm/`, method: `post`, data: data});
+    return axiosRequest('application/json', {url: `sm/`, method: `post`, data: data});
 }
