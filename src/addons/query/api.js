@@ -15,11 +15,6 @@ const axiosRequest = (content_type,{...options}) => {
     const axiosOnSuccess = (response) => { return (response.data)}; 
     const axiosOnError = (error) => { console.log(error); }
     axiosClient(options)
-    // .then(response => {
-    //     console.log((response.data));
-    // })
-    // return;
-
     return axiosClient(options).then(axiosOnSuccess).catch(axiosOnError)
 }
 //to use in hook

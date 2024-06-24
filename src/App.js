@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import Header from 'addons/component/header.inc';
 import Myself from 'addons/component/myself.inc';
 import AllButton from 'addons/component/all_button.inc';

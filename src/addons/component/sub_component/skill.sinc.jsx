@@ -16,9 +16,9 @@ function Skill(props) {
   //if it is array but empty
   if(Array.isArray(sectionData) && sectionData.length < 1){
         return (
-        <>
-        <div>No {props.type} skill at the moment</div>
-        </>
+          <>
+          <div>No {props.type} skill at the moment</div>
+          </>
         )
   }
   
