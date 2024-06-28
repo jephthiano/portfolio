@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { getNeededData, getImage, getSocialHandle, getSkill, getProject} from 'addons/query/api';
+import { getNeededData } from 'addons/query/api';
 import { initialNeededData } from 'addons/global_variable.inc';
 
 

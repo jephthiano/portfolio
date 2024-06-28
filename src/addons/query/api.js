@@ -8,12 +8,15 @@ const auth = "JePhThAh";
 //AXIOS API
 // axios starts
 const axiosClient = axios.create({baseURL: req});
-const axiosRequest = (content_type,{...options}) => {
+const axiosRequest = (content_type,{...options}, type='fetch') => {
     axiosClient.defaults.headers.common.Authorization = auth;
     axiosClient.defaults.headers.common.ContentType = content_type;
     
-    const axiosOnSuccess = (response) => { return (response.data)}; 
-    const axiosOnError = (error) => { console.log(error); }
+    const axiosOnSuccess = (response) => {
+        return (type === 'fetch') ? response.data.responseData : response.data;
+    }; 
+    const axiosOnError = (error) => {}
+
     axiosClient(options)
     return axiosClient(options).then(axiosOnSuccess).catch(axiosOnError)
 }
@@ -23,30 +26,29 @@ const axiosRequest = (content_type,{...options}) => {
 
 
 // FETCH API
+//fetch starts
+// const DEFAULT_OPTIONS = {
+//     headers : {
+//         "Authorization":auth,
+//         "Content-Type":"application/json",
+//     },
+// }
 
-// //fetch starts
-const DEFAULT_OPTIONS = {
-    headers : {
-        "Authorization":auth,
-        "Content-Type":"application/json",
-    },
-}
-
-const fetchRequest = (url, options = {}, dependencies = []) => {
-    const fetchOnSuccess = (data) => { return {data:data} }
-    const fetchOnError = (error) => { console.log(error) }
-    return fetch(`${req}${url}`,{...DEFAULT_OPTIONS,...options})
-    .then(response => {
-        if(response.ok){
-            console.log(response);
-            return JSON.parse(response);
-        }else{
-            throw new Error();
-        }
-    })
-    .then(fetchOnSuccess)
-    .catch(fetchOnError)
-}
+// const fetchRequest = (url, options = {}, dependencies = []) => {
+//     const fetchOnSuccess = (data) => { return {data:data} }
+//     const fetchOnError = (error) => { console.log(error) }
+//     return fetch(`${req}${url}`,{...DEFAULT_OPTIONS,...options})
+//     .then(response => {
+//         if(response.ok){
+//             console.log(response);
+//             return JSON.parse(response);
+//         }else{
+//             throw new Error();
+//         }
+//     })
+//     .then(fetchOnSuccess)
+//     .catch(fetchOnError)
+// }
 //to use in hook
 // return await fetchRequest(`act/sm/`,{method: `post`}); // get
 // return await fetchRequest(`get/gsk/`,{method: `get`}); // get
@@ -57,12 +59,14 @@ const fetchRequest = (url, options = {}, dependencies = []) => {
 
 //READ REQUEST
 export const getNeededData = async () => {
-    let data = JSON.stringify({"request_type" : "normal", "action" : "get_needed_data"});
-    return await axiosRequest('application/json', {url: `gnd/`, method: `post`, data: data});
-    // return await fetchRequest(`gnd/`,{method: `post`, data: data}); // get
+    let data = {"request_type" : "normal", "action" : "get_needed_data"};
+    return await axiosRequest('application/json', {url: `/`, method: `post`, data: data});
+    // return await fetchRequest(``,{method: `post`, data: data}); // get
 }
 
 //CREATE, UPDATE AND DELETE REQUEST
-export const sendMessage = (data) => {
-    return axiosRequest('application/json', {url: `sm/`, method: `post`, data: data});
+export const sendMessage = (nor_data) => {
+    let req_data = {"request_type" : "normal", "action" : "send_message"};
+    const data = { ...req_data, ...nor_data };
+    return axiosRequest('application/json', {url: ``, method: `post`, data: data}, 'post');
 }

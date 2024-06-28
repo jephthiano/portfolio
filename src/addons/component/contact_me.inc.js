@@ -14,7 +14,12 @@ function ContactMe(props) {
   const sm = useSendMessage(data);
 
   const  handleMessage = (e) => {
-    setData($('form').serialize());
+    // setData($('form').serialize());
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
+    setData({name:name, email:email, subject:subject, message:message});
     e.preventDefault();
     sm.mutate();
   }
@@ -49,10 +54,10 @@ function ContactMe(props) {
             <div className='j-col m6 j-padding'>
                 <div className='j-bolder'style={{fontFamily:'sofia',marginBottom:'15px'}}>Send Me a Message</div>
                 <form onSubmit={(e) => handleMessage(e)}className=''>
-                  <TextInput type='text'id='nm'placeholder='Name'/> <br/>
-                  <TextInput type='email'id='em'placeholder='Email'/> <br/>
-                  <TextInput type='text'id='sb'placeholder='Subject'/> <br/>
-                  <TextArea id='ms'placeholder='Message'/> <br/>
+                  <TextInput type='text'id='name'placeholder='Name'/> <br/>
+                  <TextInput type='email'id='email'placeholder='Email'/> <br/>
+                  <TextInput type='text'id='subject'placeholder='Subject'/> <br/>
+                  <TextArea id='message'placeholder='Message'/> <br/>
                   <Button id='sbtn' disabled={sm.isPending} loading={sm.isPending}
                     value={sm.isPending ? 
                         "Sending" 

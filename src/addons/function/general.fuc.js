@@ -17,6 +17,7 @@ $(document).ready(
     }
 )
 
+
 // reverse string, get random number, add number, remove number
 export const rvs = (str) => {return str.split("").reverse().join('');}
 export const grn = () => {return Math.floor(Math.random() * 9) + 1;}
@@ -27,6 +28,10 @@ export const rn = (str) => {str = ''+str;return rvs(str.slice(3).slice(0,-4));}
 function alertoff(){ setTimeout(thealert,5000); }
 function thealert(){ $("#thealert").fadeOut('slow'); }
 
+//check if object is empty
+export const isEmptyObject = (obj) => {
+   return Object.keys(obj).length < 1;
+}
 //extract object
 export const extractObject = (obj,key,val) => {
     let dataArray = [];
@@ -76,7 +81,7 @@ export const r_m = (s='',d='st') => {
 }
 
 // return message [for box message]
-export const r_m2 = (s='',d='st') => {
+export const r_m2 = (s='',type='failed',d='st') => {
     if(s.length < 1){
         s = `
             <span>Error occurred while running request, please try again later or reload page</span>
