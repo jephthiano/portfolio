@@ -15,12 +15,12 @@ export const useSendMessage = (data) => {
         r_m2(`${err_msg} Error occurred while sending message`);
     },
     onSuccess: (response) => {
+      console.log(response);
       if(response.status){
         r_m2(response.message,'success');
         $('.ip').val('');
       }else{
         if(!isEmptyObject(response.errorData)){
-          
           for(let x in response.errorData){$(`#${x}e`).html(`* ${response.errorData[x]}`);}
         }else{
           r_m2(response.message,'failed');

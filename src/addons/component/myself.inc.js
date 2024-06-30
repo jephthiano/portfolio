@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import {useSelector} from "react-redux";
-import  {horNav, downloadFile} from 'addons/function/general.fuc.js';
+import  {horNav} from 'addons/function/general.fuc.js';
+import { downloadFile } from 'addons/query/api';
 import { server } from 'addons/global_variable.inc';
 
 function Myself(props) {
@@ -22,7 +23,7 @@ function Myself(props) {
               </div>
             </span>
             <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif'}}>
-              <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile(cVURL,'OLADEJO JEPHTHAH CV.pdf')}>
+              <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile('OLADEJO JEPHTHAH CV.pdf')}>
                 Download CV
               </div>
               {/* <a href={cVURL}className='j-round j-btn j-bolder j-padding'>

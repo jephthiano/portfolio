@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import axios from 'axios';
-import { err_msg } from 'addons/global_variable.inc.js';
+import { err_msg, auth } from 'addons/global_variable.inc.js';
 
 
 // click anywhere to hide modal
@@ -151,17 +151,18 @@ export const horNav = (clk_s,clk,itr='') =>{
   }
 
   //downloadfile
-  export const downloadFile = (path,fileName) => {
+  export const downloadFile = (fileName) => {
     axios({
         method:'get',
-        url:path,
+        url:`http://localhost:4000/dcv/`,
         responseType:'arraybuffer',
         headers:{
-            'Authorization':'JePhThAh',
+            'Authorization':auth,
             'content-Type':'application/pdf',
         },
     })
     .then(response =>{
+        console.log(response);
             const blob = new Blob([response.data], {type: 'application/pdf'});
             //create the object URL
             const url = window.URL.createObjectURL(blob);
