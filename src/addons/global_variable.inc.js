@@ -1,14 +1,12 @@
-//export const server = "http://www.portfoliobe.com/"
 
-// export const server = "http://localhost:4000/"
+export const server = process.env.REACT_APP_SERVER_URL;
 
-export const server = "https://jephthiano-node.onrender.com/"
-
-export const imgServer = `${server}`;
+export const imgServer = process.env.REACT_APP_MEDIA_SERVER;
 
 export const err_msg = "<b class='j-text-color8'>Sorry!!!</b><br>";
 
-export const auth = "JePhThAh";
+export const auth = process.env.REACT_APP_AUTH;
+
 // image
 const image = "/icon.jpg";
 
@@ -49,7 +47,6 @@ const skill = [
     {"id":"8","s_type":"others","s_skill":"WebSocket","s_level":"Average"},
     {"id":"16","s_type":"others","s_skill":"Git & GitHub","s_level":"Experienced"},
     {"id":"17","s_type":"others","s_skill":"UI\/UX Design","s_level":"Average"},
-    
 ]
 
 //project data
