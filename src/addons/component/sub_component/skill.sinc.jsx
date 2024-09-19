@@ -1,14 +1,15 @@
 import { useSelector } from "react-redux";
-import { useNeededData } from 'addons/query/get_query';
+// import { useNeededData } from 'addons/query/get_query';
 import { extractObject } from 'addons/function/general.fuc'
+import { initialNeededData } from 'addons/global_variable.inc';
 
 function Skill(props) {
   //getting theme color
   const thColor = useSelector((state) => state.theme.value);
   const progressBg = `${thColor.bgColor2} j-round`;
 
-  const { data, isSuccess, isError, isLoading } = useNeededData();
-  const skillData = data.skill;
+  // const { data, isSuccess, isError, isLoading } = useNeededData();
+  const skillData = initialNeededData.skill;
 
 
   //get new array by type

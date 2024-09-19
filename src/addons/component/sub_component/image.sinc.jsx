@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { useNeededData } from 'addons/query/get_query';
-import { imgServer } from 'addons/global_variable.inc';
+import { initialNeededData } from 'addons/global_variable.inc';
+// import { useNeededData } from 'addons/query/get_query';
 
 function Image() {
     //getting theme color
@@ -9,8 +9,8 @@ function Image() {
     const lgImgClass = `${theme.border} j-hide-small j-round-large`;
 
     // using fetch image data
-    const { data,  isError, isLoading } = useNeededData();
-    const imgUrl2 = data.image;
+    // const { data,  isError, isLoading } = useNeededData();
+    const imgUrl2 = `media/`+initialNeededData.image;
 
     return (
       <>

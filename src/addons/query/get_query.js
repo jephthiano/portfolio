@@ -8,7 +8,7 @@ export const useNeededData = () => {
     return useQuery(
         { queryKey: ['neededData'], 
             queryFn: getNeededData, 
-            initialData: initialNeededData,
+            // initialData: initialNeededData,
             retry: false, 
         }
     );

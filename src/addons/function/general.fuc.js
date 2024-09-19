@@ -32,6 +32,7 @@ function thealert(){ $("#thealert").fadeOut('slow'); }
 export const isEmptyObject = (obj) => {
    return Object.keys(obj).length < 1;
 }
+
 //extract object
 export const extractObject = (obj,key,val) => {
     let dataArray = [];

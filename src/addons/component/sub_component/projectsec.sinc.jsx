@@ -1,13 +1,14 @@
-import { useNeededData } from 'addons/query/get_query';
 import { imgServer } from 'addons/global_variable.inc';
 import { toggle_modal, extractObject } from 'addons/function/general.fuc'
 import { ProjectModal } from 'addons/function/modal.fuc';
+import { initialNeededData } from 'addons/global_variable.inc';
+// import { useNeededData } from 'addons/query/get_query';
 
 
 const ProjectSec = (props) => {
 
-  const { data,  isError, isLoading } = useNeededData();
-  const projectData = data.project;
+  // const { data,  isError, isLoading } = useNeededData();
+  const projectData = initialNeededData.project;
   
 
   //get new array by type (if data is fine)
@@ -27,7 +28,7 @@ const ProjectSec = (props) => {
     <>
     {
       sectionData.map((data,index) => {
-          const projectImg = `${imgServer}project/${data.projectImg}`;
+          const projectImg = `media/project/${data.projectImg}`;
           const modalId = `project_modal${data.id}`
           return(
             <div key={index}>
