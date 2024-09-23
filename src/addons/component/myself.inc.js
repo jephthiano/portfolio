@@ -15,7 +15,7 @@ function Myself(props) {
         <div className='j-panel'>
           <div className='j-large'>Hello</div>
           <div className='j-xxlarge j-bolder'style={{fontFamily:'Sofia'}}>I'm Jephthah Oladejo</div>
-          <div className='j-large'style={{fontFamily:'Kurale'}}>Web Application/Software Developer</div>
+          <div className='j-large'style={{fontFamily:'Kurale'}}>Full Stack Web Application/Software Developer</div>
           <div style={{marginTop:'20px'}}>
             <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif',margin:'5px 10px 5px 0px'}}>
               <div className='j-round j-btn j-bolder j-padding'onClick={() => horNav('contact_me',$('#t_contact_me'))}>

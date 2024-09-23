@@ -6,7 +6,7 @@ import { initialNeededData } from 'addons/global_variable.inc';
 function Skill(props) {
   //getting theme color
   const thColor = useSelector((state) => state.theme.value);
-  const progressBg = `${thColor.bgColor2} j-round`;
+  // const progressBg = `${thColor.bgColor2} j-round`;
 
   // const { data, isSuccess, isError, isLoading } = useNeededData();
   const skillData = initialNeededData.skill;
@@ -31,7 +31,7 @@ function Skill(props) {
             sectionData.map((data,index) => {
                 return(
                   <div className={thColor.txtColor1} key={index}>
-                    <div className='j-col s6' style={{marginBottom:'20px'}}>
+                    <div className='j-col s6 m4 l3' style={{marginBottom:'20px'}}>
                       <div style={{display:'inline-block',marginRight:'20px',position:'relative',top:'-10px'}}>
                         <i className="j-large fas fa-certificate"style={{color:'#1a80c4'}}></i>
                       </div>

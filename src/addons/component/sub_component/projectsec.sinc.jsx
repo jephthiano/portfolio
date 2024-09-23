@@ -32,7 +32,7 @@ const ProjectSec = (props) => {
           const modalId = `project_modal${data.id}`
           return(
             <div key={index}>
-              <div className="j-col s12 l6 xl4 j-padding j-round"onClick={() => toggle_modal('show',modalId)}>
+              <div className="j-col s12 l6 j-padding j-round"onClick={() => toggle_modal('show',modalId)}>
                 <div>
                   <div className="j-card-4 j-round j-display-container"style={{height:'300px',width:'inherit'}}>
                     <img src={projectImg}style={{width:'100%',height:'inherit',opacity:'0.5'}}/>

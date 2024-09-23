@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import Header from 'addons/component/header.inc';
 import Myself from 'addons/component/myself.inc';
 import AllButton from 'addons/component/all_button.inc';
-import AboutUs from 'addons/component/about_us.inc';
+import AboutMe from 'addons/component/about_me.inc';
+import Skills from 'addons/component/skills.inc';
 import Project from 'addons/component/project.inc';
 import ContactMe from 'addons/component/contact_me.inc';
 import Footer from 'addons/component/footer.inc';
@@ -20,7 +21,8 @@ function App() {
       <div>
         <div className='j-home-padding'>
           <AllButton />
-          <AboutUs />
+          <AboutMe />
+          <Skills />
           <Project />
           <ContactMe />
         </div>

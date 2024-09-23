@@ -41,6 +41,9 @@ function Header(props) {
                 <div onClick={() => horNav('about_me',$('#t_about_me'))}className='j-btn j-round-large j-margin-small j-hide-small 'style={{marginRight:'8px',backgroundColor:'rgba(0,0,0,0)'}}>
                     <span>About Me</span>
                 </div>
+                <div onClick={() => horNav('skill',$('#t_skill'))}className='j-btn j-round-large j-margin-small j-hide-small 'style={{marginRight:'8px',backgroundColor:'rgba(0,0,0,0)'}}>
+                    <span>Skills</span>
+                </div>
                 <div onClick={() => horNav('project',$('#t_project'))}className='j-btn j-round-large j-margin-small j-hide-small 'style={{marginRight:'8px',backgroundColor:'rgba(0,0,0,0)'}}>
                     <span>Projects</span>
                 </div>
@@ -59,6 +62,7 @@ function Header(props) {
                     <div className='j-right j-margin j-xxlarge'onClick={() => toggle_modal('hide','menu_modal')}>X</div>
                     <br className='j-clearfix'/>
                     <div onClick={() => {toggle_modal('hide','menu_modal');horNav('about_me',$('#t_about_me'))}}style={{opacity:'100%'}}className="j-bar-item j-button j-padding-16">About Me</div>
+                    <div onClick={() => {toggle_modal('hide','menu_modal');horNav('skill',$('#t_skill'))}}style={{opacity:'100%'}}className="j-bar-item j-button j-padding-16">Skills</div>
                     <div onClick={() => {toggle_modal('hide','menu_modal');horNav('project',$('#t_project'))}}style={{opacity:'100%'}}className="j-bar-item j-button j-padding-16">Projects</div>
                     <div onClick={() => {toggle_modal('hide','menu_modal');horNav('contact_me',$('#t_contact_me'))}}style={{opacity:'100%'}}className="j-bar-item j-button j-padding-16">Contact Me</div>
                 </div>

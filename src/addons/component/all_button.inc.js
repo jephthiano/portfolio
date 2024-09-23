@@ -11,17 +11,22 @@ function AllButton(props) {
       <>
       <div className='j-vertical-scroll j-home-padding'style={{margin:'5px 0px',padding:'0px 15px'}}>
         <div style={{padding:'10px 0px'}}>
-          <span id='t_about_me'className={btn2}style={{margin:'0px 5px 0px 0px'}}onClick={() => horNav('about_me',$('#t_about_me'))}>
+          <span id='t_about_me'className={btn2}style={{margin:'0px 3px'}}onClick={() => horNav('about_me',$('#t_about_me'))}>
             <span className="j-padding j-clickable j-btn j-round">
             <b>About Me</b>
             </span>
           </span>
-          <span id='t_project'className={btn1}style={{margin:'0px 5px'}} onClick={() => horNav('project',$('#t_project'))}>
+          <span id='t_skill'className={btn1}style={{margin:'0px 3px'}} onClick={() => horNav('skill',$('#t_skill'))}>
+            <span className="j-padding j-clickable j-btn j-round">
+            <b>Skills</b>
+            </span>
+          </span>
+          <span id='t_project'className={btn1}style={{margin:'0px 3px'}} onClick={() => horNav('project',$('#t_project'))}>
             <span className="j-padding j-clickable j-btn j-round">
             <b>Projects</b>
             </span>
           </span>
-          <span id='t_contact_me'className={btn1}style={{margin:'0px 5px'}}onClick={() => horNav('contact_me',$('#t_contact_me'))}>
+          <span id='t_contact_me'className={btn1}style={{margin:'0px 3px'}}onClick={() => horNav('contact_me',$('#t_contact_me'))}>
             <span className="j-padding j-clickable j-btn j-round">
             <b>Contact Me</b>
             </span>
