@@ -7,7 +7,7 @@ function Footer(props) {
 
     return (
       <>
-      <div className={theme.bgColor2}>
+      <div className={theme.bgColor2} style={{position:'absolute', bottom:'0', width:'100%'}}>
         <div id="footer"title='footer'className="dmt3 j-center j-padding">
             <div><h4 style={{fontSize:'20px'}}>Oladejo Jephthah</h4></div>
             <SocialHandle bgColor={theme.bgColor2}/>

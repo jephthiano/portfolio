@@ -22,7 +22,6 @@ function Skills(props) {
             ))
           }
         </div>
-        <br/>
       </div>
       </>
     );

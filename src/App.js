@@ -15,7 +15,7 @@ function App() {
   
   return (
     <>
-    <div id='base'className={thColor.bgColor1}>
+    <div id='base'className={thColor.bgColor1}style={{position:'relative', minHeight:'1100px'}}>
       <Header />
       <Myself />
       <div>
@@ -27,6 +27,7 @@ function App() {
           <ContactMe />
         </div>
       </div>
+      <br/><br/><br/><br/><br/><br/><br/>
       <Footer />
       <span id='st'></span>
     </div>
