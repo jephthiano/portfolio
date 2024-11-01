@@ -42,6 +42,7 @@ const skill = [
     {"id":"20","s_type":"database","s_skill":"SQL","s_level":"Expert"},
     {"id":"10","s_type":"database","s_skill":"MySQL","s_level":"Expert"},
     {"id":"10","s_type":"database","s_skill":"MongoDB","s_level":"Expert"},
+    {"id":"10","s_type":"database","s_skill":"Redis","s_level":"Expert"},
     {"id":"19","s_type":"database","s_skill":"PostgreSQL","s_level":"Experienced"},
     {"id":"11","s_type":"others","s_skill":"SEO","s_level":"Expert"},
     {"id":"6","s_type":"others","s_skill":"JSON & XML","s_level":"Expert"},

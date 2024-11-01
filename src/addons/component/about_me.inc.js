@@ -1,8 +1,6 @@
 import $ from 'jquery'
 import { useSelector } from "react-redux";
 import { horNav } from 'addons/function/general.fuc';
-import Image from 'addons/component/sub_component/image.sinc';
-
 
 function AboutMe(props) {
   //getting theme color
