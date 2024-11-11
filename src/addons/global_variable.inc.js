@@ -19,7 +19,7 @@ const skillData = [
     {name: "OTHERS", short: "others",},
 ]
 
-//social handle data
+//social handle
 const socialHandle = [
     {"id":"2","s_name":"twitter","s_icon":"fab fa-twitter","s_link":"https://www.twitter.com\/almost_invisibu"},
     {"id":"3","s_name":"linkedin","s_icon":"fab fa-linkedin","s_link":"https://linkedin.com\/in\/jephthahooh"},
