@@ -8,7 +8,7 @@ export const imgServer = process.env.REACT_APP_MEDIA_SERVER;
 export const err_msg = "<b class='j-text-color8'>Sorry!!!</b><br>";
 
 
-// image
+// image data
 const image = "/icon.jpg";
 
 //skills type data
