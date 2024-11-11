@@ -29,7 +29,7 @@ function App() {
       </div>
       <br/><br/><br/><br/><br/><br/><br/>
       <Footer />
-      <span id='st'></span>
+      <span id='s'></span>
     </div>
     </>
   );
