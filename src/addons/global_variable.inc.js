@@ -66,6 +66,8 @@ const project = [
     // {"id":"8","p_type":"web","p_name":"Blog\/News Website","p_link":"https://jobsblog333.000webhostapp.com","p_rank":3,"p_color":"black","p_languages":"HTML, CSS, JavaScript, Jquery, PHP, MySql, AJAX, JSON and XML","p_info":"This project is based on blog\/news website.\r\nIt features include:\r\n- Admin section with different admin level\r\n- Admin controls everything from the admin section\r\n- Users read news\r\n- Users can comment on each news\r\n- Users can share news with one click\r\n- Many more features","projectImg":"blog.jpg"}
 ]
 
+
+// combine all
 export const initialNeededData = {
     image : image,
     skillData : skillData,
