@@ -11,7 +11,7 @@ export const err_msg = "<b class='j-text-color8'>Sorry!!!</b><br>";
 // image
 const image = "/icon.jpg";
 
-//skills type object
+//skills type data
 const skillData = [
     {name: "FRONT-END", short: "frontend dev",},
     {name: "BACK-END", short: "backend dev",},
