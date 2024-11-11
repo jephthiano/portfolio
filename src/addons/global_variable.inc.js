@@ -67,7 +67,7 @@ const project = [
 ]
 
 
-// combine all data
+// combine all 
 export const initialNeededData = {
     image : image,
     skillData : skillData,
