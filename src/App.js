@@ -11,7 +11,6 @@ import Footer from 'addons/component/footer.inc';
 
 function App() {
   const thColor = useSelector((state) => state.theme.value);
-  
   return (
     <>
     <div id='base'className={thColor.bgColor1}style={{position:'relative', minHeight:'1100px'}}>
