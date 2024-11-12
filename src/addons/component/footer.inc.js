@@ -7,12 +7,12 @@ function Footer(props) {
 
     return (
       <>
-      <div className={theme.bgColor2} style={{position:'absolute', bottom:'0', width:'100%'}}>
+      <div className='j-home-padding'>
         <div id="footer"title='footer'className="dmt3 j-center j-padding">
             <div><h4 style={{fontSize:'20px'}}>Oladejo Jephthah</h4></div>
-            <SocialHandle bgColor={theme.bgColor2}/>
+            <SocialHandle bgColor={theme.bgColor1}/>
             <p className="j-tiny"style={{margin:'0px',padding:'5px',fontFamily:'Open Sans'}}>Copyright &copy {year} Jephthiano. All rights reserved.</p>
-            <center><a className='j-bolder j-underline'href="">Designed & Developed by Oladejo Jephthah</a></center>
+            <center><span className='j-bolder j-underline'href="">Designed & Developed by Oladejo Jephthah</span></center>
         </div>
       </div>
       </>

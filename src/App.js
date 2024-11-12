@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import Header from 'addons/component/header.inc';
 import Myself from 'addons/component/myself.inc';
-import AllButton from 'addons/component/all_button.inc';
 import AboutMe from 'addons/component/about_me.inc';
 import Skills from 'addons/component/skills.inc';
 import Project from 'addons/component/project.inc';
@@ -18,16 +17,10 @@ function App() {
     <div id='base'className={thColor.bgColor1}style={{position:'relative', minHeight:'1100px'}}>
       <Header />
       <Myself />
-      <div>
-        <div className='j-home-padding'>
-          <AllButton />
-          <AboutMe />
-          <Skills />
-          <Project />
-          <ContactMe />
-        </div>
-      </div>
-      <br/><br/><br/><br/><br/><br/><br/>
+      <AboutMe />
+      <Skills />
+      <Project />
+      <ContactMe />
       <Footer />
       <span id='st'></span>
     </div>
