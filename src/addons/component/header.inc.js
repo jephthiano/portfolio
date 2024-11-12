@@ -1,7 +1,5 @@
-import $ from 'jquery'
 import {useSelector, useDispatch} from "react-redux";
 import {changeTheme} from "addons/state/reducer";
-import  {horNav} from 'addons/function/general.fuc.js';
 import  {toggle_modal} from 'addons/function/general.fuc.js';
 
 function Header(props) {
@@ -12,16 +10,20 @@ function Header(props) {
     const changeColor = () => {
         if(thColor.bgColor1 === 'j-color4'){
             var themeData = {
-                bgColor1: 'j-color3', 
-                bgColor2: 'j-color4', 
+                bgColor1: 'j-color10',
+                bgColorAlt1: 'j-color11',
+                bgColor2: 'j-color4',
+                bgColorAlt2: 'j-color6',
                 txtColor1: 'j-text-color6',
                 txtColor2: 'j-text-color7',
-                border: 'j-border-2 j-border-color7'
+                border: 'j-border-1 j-border-color2'
             }
         }else{
             var themeData = {
                 bgColor1: 'j-color4', 
-                bgColor2: 'j-color3', 
+                bgColorAlt1: 'j-color6',
+                bgColor2: 'j-color10', 
+                bgColorAlt2: 'j-color11',
                 txtColor1: 'j-text-color7',
                 txtColor2: 'j-text-color6',
                 border: 'j-border-2 j-border-color6'

@@ -5,12 +5,13 @@ import  {horNav} from 'addons/function/general.fuc';
 
 function Project(props) {
   const thColor = useSelector((state) => state.theme.value);
+  const classData = `${thColor.bgColorAlt1} j-home-padding`
 
   let btn2 = thColor.bgColor2+' laucherpro'; let btn1 = thColor.bgColor1+' laucherpro';
 
     return (
       <>
-      <div id='project'title='Oladejo Jephthah Previous Projects' className='j-home-padding'>
+      <div id='project'title='Oladejo Jephthah Previous Projects' className={classData}>
         <div style={{padding:"50px 0px"}}>
           <div className=''>
             <div className='j-xxlarge j-bolder j-center'><b>PROJECTS</b></div>

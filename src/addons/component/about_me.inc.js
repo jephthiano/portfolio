@@ -3,10 +3,11 @@ import { useSelector } from "react-redux";
 function AboutMe(props) {
   //getting theme color
   const thColor = useSelector((state) => state.theme.value);
+  const classData = `${thColor.bgColorAlt1} j-home-padding`
   
   return (
       <>
-      <div id='about_me'title='about oladejo jephthah'className='j-home-padding'>
+      <div id='about_me'title='about oladejo jephthah'className={classData}>
         <div style={{padding:"50px 0px"}}>
           <div className='j-xxlarge j-bolder j-center'><b>ABOUT ME</b></div>
           <div className='j-large j-padding'style={{lineHeight:'30px'}}>

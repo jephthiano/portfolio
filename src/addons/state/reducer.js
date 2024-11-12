@@ -1,8 +1,10 @@
 import {createSlice} from "@reduxjs/toolkit"
 
 const initialThemeStateValue = {
-    bgColor1: 'j-color3', 
+    bgColor1: 'j-color10',
+    bgColorAlt1: 'j-color11',
     bgColor2: 'j-color4',
+    bgColorAlt2: 'j-color6',
     txtColor1: 'j-text-color6',
     txtColor2: 'j-text-color7',
     border: 'j-border-1 j-border-color2'
