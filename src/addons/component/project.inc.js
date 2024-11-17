@@ -16,7 +16,7 @@ function Project(props) {
           <div className=''>
             <div className='j-xxlarge j-bolder j-center'><b>PROJECTS</b></div>
             <div className='j-vertical-scroll j-padding'>
-              <div style={{padding:'10px 0px'}}>
+              {/* <div style={{padding:'10px 0px'}}>
                 <span id='t_website'className={btn2}style={{margin:'0px 5px 0px 0px'}}onClick={() => horNav('website',$('#t_website'),'pro')}>
                   <span className="j-padding j-clickable j-btn j-round">
                   <b>Websites</b>
@@ -27,7 +27,7 @@ function Project(props) {
                   <b>Apps</b>
                   </span>
                 </span>
-              </div>
+              </div> */}
             </div>
               
               <div style={{marginLeft:'5px'}}>

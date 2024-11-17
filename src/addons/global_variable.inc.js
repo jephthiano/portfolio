@@ -13,9 +13,9 @@ const image = "/icon.jpg";
 
 //skills type data
 const skillData = [
-    {name: "FRONT-END", short: "frontend dev",},
     {name: "BACK-END", short: "backend dev",},
     {name: "DATABASE", short: "database",},
+    {name: "FRONT-END", short: "frontend dev",},
     {name: "OTHERS", short: "others",},
 ]
 
@@ -44,6 +44,7 @@ const skill = [
     {"id":"10","s_type":"database","s_skill":"MongoDB","s_level":"Expert"},
     {"id":"10","s_type":"database","s_skill":"Redis","s_level":"Expert"},
     {"id":"19","s_type":"database","s_skill":"PostgreSQL","s_level":"Experienced"},
+    {"id":"11","s_type":"others","s_skill":"TypeScript","s_level":"Expert"},
     {"id":"11","s_type":"others","s_skill":"Docker","s_level":"Expert"},
     {"id":"8","s_type":"others","s_skill":"WebSocket","s_level":"Expert"},
     {"id":"16","s_type":"others","s_skill":"Git","s_level":"Expert"},
