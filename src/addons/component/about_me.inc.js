@@ -13,7 +13,7 @@ function AboutMe(props) {
           <div className='j-large j-padding'style={{lineHeight:'30px'}}>
             <div style={{marginBottom:'10px'}}>
               I'm a Fullstack Software/ Web Application Developer with over 4 years of experience in developing modern, mobile first,
-              responsive, scalable and fast softwares and APIs.
+              responsive, scalable and fast softwares and APIs. AlsoI have experience in developing software related to fintech, education, ecommerce and others.
             </div>
             <div style={{marginBottom:'10px'}}>
               I am an individual with passion for learning and transforming creative ideas into digital solutions and dedicated to delivering high-quality results. My strength lies in creativity, innovation 
