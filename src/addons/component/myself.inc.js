@@ -18,9 +18,9 @@ function Myself(props) {
             <div className='j-large'style={{fontFamily:'Kurale'}}>Full Stack Web Application/Software Developer</div>
             <div style={{marginTop:'20px'}}>
               <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif',margin:'5px 10px 5px 0px'}}>
-                <div className='j-round j-btn j-bolder j-padding'onClick={() => horNav('contact_me',$('#t_contact_me'))}>
+                <a href="#contact_me" className='j-round j-btn j-bolder j-padding'>
                   Contact Me
-                </div>
+                </a> 
               </span>
               <span className={thColor.bgColor2} style={{fontFamily:'Sofia,sans-serif'}}>
                 <div className='j-round j-btn j-bolder j-padding'onClick={() => downloadFile('OLADEJO JEPHTHAH CV.pdf')}>
