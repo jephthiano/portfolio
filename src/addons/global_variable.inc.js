@@ -37,6 +37,7 @@ const skill = [
     {"id":"4","s_type":"frontend dev","s_skill":"JQuery","s_level":"Expert"},
     {"id":"5","s_type":"frontend dev","s_skill":"React JS","s_level":"Expert"},
     {"id":"9","s_type":"backend dev","s_skill":"PHP","s_level":"Expert"},
+    {"id":"9","s_type":"backend dev","s_skill":"Laravel","s_level":"Experienced"},
     {"id":"21","s_type":"backend dev","s_skill":"Node JS","s_level":"Expert"},
     {"id":"21","s_type":"backend dev","s_skill":"Express JS","s_level":"Expert"},
     {"id":"20","s_type":"database","s_skill":"SQL","s_level":"Expert"},
@@ -46,6 +47,7 @@ const skill = [
     {"id":"19","s_type":"database","s_skill":"PostgreSQL","s_level":"Experienced"},
     {"id":"11","s_type":"others","s_skill":"TypeScript","s_level":"Expert"},
     {"id":"11","s_type":"others","s_skill":"Docker","s_level":"Expert"},
+    {"id":"11","s_type":"others","s_skill":"Kubernetes","s_level":"Expert"},
     {"id":"8","s_type":"others","s_skill":"WebSocket","s_level":"Expert"},
     {"id":"16","s_type":"others","s_skill":"Git","s_level":"Expert"},
 ]
