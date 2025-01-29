@@ -31,6 +31,7 @@ const socialHandle = [
 const skill = [
     {"id":"1","s_type":"frontend dev","s_skill":"HTML","s_level":"Expert"},
     {"id":"2","s_type":"frontend dev","s_skill":"CSS","s_level":"Expert"},
+    {"id":"3","s_type":"frontend dev","s_skill":"Tailwind","s_level":"Expert"},
     {"id":"3","s_type":"frontend dev","s_skill":"Bootstrap","s_level":"Expert"},
     {"id":"4","s_type":"frontend dev","s_skill":"SASS","s_level":"Experienced"},
     {"id":"5","s_type":"frontend dev","s_skill":"JavaScript","s_level":"Expert"},
